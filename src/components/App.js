@@ -1,12 +1,13 @@
 import React from "react";
-import Header from './Header.js';
+import Header from './Header';
+import NewKegControl from "./NewKegControl.js";
  
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <TicketList />
       <hr />
+      {/* <ComponentViewControl /> */}
     </React.Fragment>
   );
 }

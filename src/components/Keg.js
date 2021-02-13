@@ -14,9 +14,8 @@ function Keg(props) {
           <h4>{props.stock}</h4>
           <h4>{props.id}</h4>
         </div>
-     </>
-    )
-  }
+      )
+    </>
 }
 
 
