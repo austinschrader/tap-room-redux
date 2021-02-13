@@ -7,7 +7,7 @@ function App() {
     <React.Fragment>
       <Header />
       <hr />
-      {/* <ComponentViewControl /> */}
+      <NewKegControl />
     </React.Fragment>
   );
 }
