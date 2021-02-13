@@ -17,3 +17,8 @@ return (
   </>
 )
 
+KegDetail.propTypes = {
+  keg: PropTypes.object,
+  onRestrock: PropTypes.func,
+  onBuy: PropTypes.func
+};
