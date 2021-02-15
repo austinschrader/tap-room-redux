@@ -6,8 +6,18 @@ function KegList(props) {
   return ( 
     <>
       <hr/>
+      {props.kegList.map((keg) => 
+        <Keg
+        whenKegClicked = {props.onKegSelection} 
+        name = {keg.name}
+        brand = {keg.brand}
+        price = {keg.price}
+        alcoholContent = {keg.alcoholContent}
+        quantity = {keg.quantity}
+        key = {keg.id}/>
+      )}
     </>
-  )
+  );
 }
 
 KegList.propsTypes = {
