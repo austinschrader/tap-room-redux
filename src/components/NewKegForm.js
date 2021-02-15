@@ -21,21 +21,21 @@ function NewKegForm(props) {
           required
         />
         <input
-          type='text'
+          type='number'
           name='price'
           placeholder='Price'
           value='5'
           required
         />
         <input
-          type='text'
+          type='number'
           name='alcoholContent'
           placeholder='ABV'
           value='4'
           required
         />
         <input
-          type='text'
+          type='number'
           name='quantity'
           placeholder='Quantity'
           value='2'
@@ -50,10 +50,10 @@ function NewKegForm(props) {
     event.preventDefault();
     props.onNewKegCreation({
       name: event.target.name.value,
-      brand: event.target.name.brand,
-      price: event.target.name.price,
-      alcoholContent: event.target.name.alcoholContent,
-      quantity: event.target.name.quantity,
+      brand: event.target.brand.value,
+      price: event.target.price.value,
+      alcoholContent: event.target.alcoholContent.value,
+      quantity: event.target.quantity.value,
       id: v4(),
     });
   }
