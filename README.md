@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a React.js front end built for Northside Tap Room keg menu. On the application, patrons can view the various kegs available at Northside Tap Room with information including keg name, price, ABV, and much more. 
+This is a React.js front end built for Northside Tap Room keg menu. On the application, patrons can view the various kegs available at Northside Tap Room with information including keg name, price, ABV, and much more.
 
 By Austin Schrader, 2/12/2021
 
@@ -28,6 +28,10 @@ By Austin Schrader, 2/12/2021
 2. Right click the downloaded file and "Unzip"
 3. Double click on the file that was just unzipped
 4. Congratulations, you downloaded the repository.
+
+## Component Diagram
+
+![Component Diagram](https://github.com/austinschrader/tap-room/blob/main/drawdiagram.PNG)
 
 ## Known Bugs
 
