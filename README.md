@@ -6,6 +6,10 @@ This is a React.js front end built for Northside Tap Room keg menu. On the appli
 
 By Austin Schrader, 2/12/2021
 
+## Component Diagram
+
+![Component Diagram](https://github.com/austinschrader/tap-room/blob/main/drawdiagram.PNG)
+
 ## Project Setup
 
 1. Clone or Download this repository
@@ -28,10 +32,6 @@ By Austin Schrader, 2/12/2021
 2. Right click the downloaded file and "Unzip"
 3. Double click on the file that was just unzipped
 4. Congratulations, you downloaded the repository.
-
-## Component Diagram
-
-![Component Diagram](https://github.com/austinschrader/tap-room/blob/main/drawdiagram.PNG)
 
 ## Known Bugs
 
