@@ -39,12 +39,29 @@ class NewKegControl extends React.Component {
     }
   };
 
+  handleBuy = () => {
+    const quantityOfKeg = this.state.selectedKeg.quantity;
+    const restockedKeg = {
+      ...this.state.selectedKeg,
+      quantity: quantityOfKeg - 1,
+    };
+    const newMasterList = this.state.masterKegList
+      .filter((keg) => keg.id !== this.state.selectedKeg.id)
+      .concat(restockedKeg);
+    this.setState({ selectedKeg: restockedKeg, masterKegList: newMasterList });
+  };
+
   handleRestock = () => {
     const quantityOfKeg = this.state.selectedKeg.quantity;
-    const restockedKeg = {...this.state.selectedKeg, quantity:(quantityOfKeg + 1)};
-    const newMasterList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(restockedKeg);
-    this.setState({selectedKeg: restockedKeg, masterKegList: newMasterList});
-  }
+    const restockedKeg = {
+      ...this.state.selectedKeg,
+      quantity: quantityOfKeg + 1,
+    };
+    const newMasterList = this.state.masterKegList
+      .filter((keg) => keg.id !== this.state.selectedKeg.id)
+      .concat(restockedKeg);
+    this.setState({ selectedKeg: restockedKeg, masterKegList: newMasterList });
+  };
 
   handleAddingNewKegToList = (newKeg) => {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
