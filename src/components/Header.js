@@ -4,7 +4,7 @@ function Header(){
   return (
     <>
       <h1>Tap Room</h1>
-      <img src="https://pixabay.com/get/ga3c13952c3fe184a8ccf593931ad8d3ebbabcc9ba78ad62447e73486f0d4f82054d093fd198e77f606f983240dcde0c9_640.jpg" width="500" alt="Tap Room" />
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/09/31/ca/2f/the-civic-taproom-bottle.jpg" width="500" alt="Tap Room" />
     </>
   );
 }
