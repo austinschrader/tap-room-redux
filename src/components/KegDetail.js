@@ -18,6 +18,8 @@ return (
 
 KegDetail.propTypes = {
   keg: PropTypes.object,
-  onRestrock: PropTypes.func,
+  onRestock: PropTypes.func,
   onBuy: PropTypes.func
 };
+
+export default KegDetail;
