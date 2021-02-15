@@ -39,17 +39,21 @@ class NewKegControl extends React.Component {
     }
   };
 
+  handleAddingNewKegToList = (newKeg) => {
+    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    this.setState({ masterKegList: newMasterKegList, visibleView: 1 });
+  };
+
   render() {
     let currentlyVisibleState = null;
-    let buttonText = null;
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = (
-        <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
-      );
-      buttonText = 'Return to Keg List';
-    } else {
-      currentlyVisibleState = <KegList kegList={this.state.masterKegList} />;
-      buttonText = 'Add Keg';
+    if (this.state.selectedKeg != null){
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onRestock={this.handleRestock} onBuy={this.handleBuy}/>
+    } else if(this.state.visibleView === 0) {
+      currentlyVisibleState = null;
+    } else if(this.state.visibleView === 1) {
+      currentlyVisibleState = <KegList kegList = {this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg}/>
+    } else if(this.state.visibleView === 2) {
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
     }
     return (
       <>
