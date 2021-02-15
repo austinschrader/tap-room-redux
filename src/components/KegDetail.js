@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function KegDetail(props) {
   const { keg } = props;
@@ -8,7 +8,7 @@ function KegDetail(props) {
   if (keg.quantity > 0) {
     restockMessage = keg.quantity;
   } else {
-    restockMessage = "Sorry, this keg is empty!";
+    restockMessage = 'Sorry, this keg is empty!';
   }
 
   return (
@@ -20,8 +20,12 @@ function KegDetail(props) {
       <h4>{keg.alcoholContent}</h4>
       <h4>{keg.quantity}</h4>
       <h4>{keg.id}</h4>
-      <button type="button" onClick={props.onRestock}>Restock</button>
-      <button hidden={keg.quantity === 0} type="button" onClick={props.onBuy}>Buy a Bottle</button>
+      <button type='button' onClick={props.onRestock}>
+        Restock
+      </button>
+      <button hidden={keg.quantity === 0} type='button' onClick={props.onBuy}>
+        Buy a Bottle
+      </button>
     </>
   );
 }
@@ -29,7 +33,7 @@ function KegDetail(props) {
 KegDetail.propTypes = {
   keg: PropTypes.object,
   onRestock: PropTypes.func,
-  onBuy: PropTypes.func
+  onBuy: PropTypes.func,
 };
 
 export default KegDetail;

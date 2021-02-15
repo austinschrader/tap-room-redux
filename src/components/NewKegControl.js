@@ -44,16 +44,36 @@ class NewKegControl extends React.Component {
     this.setState({ masterKegList: newMasterKegList, visibleView: 1 });
   };
 
+  handleChangingSelectedKeg = (id) => {
+    const selectedKeg = this.state.masterKegList.filter(
+      (keg) => keg.id === id
+    )[0];
+    this.setState({ selectedKeg: selectedKeg });
+  };
+
   render() {
     let currentlyVisibleState = null;
-    if (this.state.selectedKeg != null){
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onRestock={this.handleRestock} onBuy={this.handleBuy}/>
-    } else if(this.state.visibleView === 0) {
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = (
+        <KegDetail
+          keg={this.state.selectedKeg}
+          onRestock={this.handleRestock}
+          onBuy={this.handleBuy}
+        />
+      );
+    } else if (this.state.visibleView === 0) {
       currentlyVisibleState = null;
-    } else if(this.state.visibleView === 1) {
-      currentlyVisibleState = <KegList kegList = {this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg}/>
-    } else if(this.state.visibleView === 2) {
-      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
+    } else if (this.state.visibleView === 1) {
+      currentlyVisibleState = (
+        <KegList
+          kegList={this.state.masterKegList}
+          onKegSelection={this.handleChangingSelectedKeg}
+        />
+      );
+    } else if (this.state.visibleView === 2) {
+      currentlyVisibleState = (
+        <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
+      );
     }
     return (
       <>

@@ -1,28 +1,29 @@
-import React from "react";
-import Keg from "./Keg";
-import PropTypes from "prop-types";
+import React from 'react';
+import Keg from './Keg';
+import PropTypes from 'prop-types';
 
 function KegList(props) {
-  return ( 
+  return (
     <>
-      <hr/>
-      {props.kegList.map((keg) => 
+      <hr />
+      {props.kegList.map((keg) => (
         <Keg
-        whenKegClicked = {props.onKegSelection} 
-        name = {keg.name}
-        brand = {keg.brand}
-        price = {keg.price}
-        alcoholContent = {keg.alcoholContent}
-        quantity = {keg.quantity}
-        key = {keg.id}/>
-      )}
+          whenKegClicked={props.onKegSelection}
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholContent={keg.alcoholContent}
+          quantity={keg.quantity}
+          key={keg.id}
+        />
+      ))}
     </>
   );
 }
 
 KegList.propsTypes = {
   kegList: PropTypes.array,
-  onKegSelection: PropTypes.func
-}
+  onKegSelection: PropTypes.func,
+};
 
 export default KegList;

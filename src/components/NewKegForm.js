@@ -6,16 +6,42 @@ function NewKegForm(props) {
   return (
     <>
       <form onSubmit={handleNewKegFormSubmission}>
-        <input type='text' name='name' placeholder='Keg name' required />
-        <input type='text' name='brand' placeholder='Keg name' required />
-        <input type='text' name='price' placeholder='Keg name' required />
+        <input
+          type='text'
+          name='name'
+          placeholder='Keg name'
+          value='Barracuda'
+          required
+        />
+        <input
+          type='text'
+          name='brand'
+          placeholder='Brand'
+          value='Heff'
+          required
+        />
+        <input
+          type='text'
+          name='price'
+          placeholder='Price'
+          value='5'
+          required
+        />
         <input
           type='text'
           name='alcoholContent'
-          placeholder='Keg name'
+          placeholder='ABV'
+          value='4'
           required
         />
-        <input type='text' name='quantity' placeholder='Keg name' required />
+        <input
+          type='text'
+          name='quantity'
+          placeholder='Quantity'
+          value='2'
+          required
+        />
+        <button type='submit'>Add Keg</button>
       </form>
     </>
   );
