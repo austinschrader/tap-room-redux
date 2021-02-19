@@ -1,4 +1,4 @@
-# Northside Tap Room
+# Northside Tap Room with Redux
 
 ## Description
 
