@@ -38,4 +38,23 @@ describe('kegListReducer', () => {
       },
     });
   });
+
+  const currentState = {
+    1: {
+      name: 'PBR',
+      brand: 'Anheuser',
+      price: 2,
+      alcoholContent: 4,
+      quantity: 5,
+      id: 1,
+    },
+    2: {
+      name: 'IPA',
+      brand: 'Ninkasi',
+      price: 3,
+      alcoholContent: 5,
+      quantity: 2,
+      id: 2,
+    },
+  };
 });
