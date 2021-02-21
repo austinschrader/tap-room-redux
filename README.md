@@ -1,4 +1,4 @@
-# Northside Tap Room with Redux
+# Northside Tap Room built with React & Redux
 
 ## Description
 

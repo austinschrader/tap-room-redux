@@ -110,4 +110,6 @@ class NewKegControl extends React.Component {
   }
 }
 
+NewKegControl = connect()(NewKegControl);
+
 export default NewKegControl;
