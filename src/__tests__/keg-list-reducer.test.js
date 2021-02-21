@@ -57,4 +57,21 @@ describe('kegListReducer', () => {
       id: 2,
     },
   };
+
+  test('Should successfully delete a keg', () => {
+    action = {
+      type: 'DELETE_KEG',
+      id: 1,
+    };
+    expect(kegListReducer(currentState, action)).toEqual({
+      2: {
+        name: 'IPA',
+        brand: 'Ninkasi',
+        price: 3,
+        alcoholContent: 5,
+        quantity: 2,
+        id: 2,
+      },
+    });
+  });
 });
